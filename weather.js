@@ -6,7 +6,10 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors()); // 🔥 Enable CORS for all origins
+app.use(cors(
+  origin: 'https://weatherly-nine-pi.vercel.app',
+  credentials: true
+)); // 🔥 Enable CORS for the app
 app.use(express.json());
 
 app.get('/weather', async (req, res) => {
