@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: ['https://weatherly-nine-pi.vercel.app', 'http://localhost:7700'],
+  origin: 'https://weatherly-nine-pi.vercel.app',
   credentials: true
 }));
 
